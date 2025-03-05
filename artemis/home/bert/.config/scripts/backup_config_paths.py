@@ -63,7 +63,7 @@ with open(BACKUP_CONFIG_PATHS, "r") as f:
             if os.path.isdir(source):
                 for dirpath, dirnames, filenames in os.walk(source):
                     # Exclude .git directories
-                    dirnames[:] = [d for d in dirnames]# if d != ".git"]
+                    dirnames[:] = [d for d in dirnames if d != ".git"]
 
                     # Copy files to the destination
                     for filename in filenames:
