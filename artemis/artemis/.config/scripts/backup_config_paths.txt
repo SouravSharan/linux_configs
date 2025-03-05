@@ -1,0 +1,23 @@
+/home/$USER/.config/conky artemis/.config/
+/home/$USER/.config/dunst artemis/.config/
+/home/$USER/.config/neofetch artemis/.config/
+/home/$USER/.config/nitrogen artemis/.config/
+/home/$USER/.config/NuGet artemis/.config/
+/home/$USER/.config/nvim artemis/.config/
+/home/$USER/.config/Optimus\ Manager artemis/.config/
+/home/$USER/.config/pamac artemis/.config/
+/home/$USER/.config/pavucontrol.ini artemis/.config/
+/home/$USER/.config/picom.conf artemis/.config/
+/home/$USER/.config/qt5ct artemis/.config/
+/home/$USER/.config/QtProject.conf artemis/.config/
+/home/$USER/.config/ranger artemis/.config/
+/home/$USER/.config/scripts artemis/.config/
+/home/$USER/.config/terminator artemis/.config/
+/home/$USER/.config/Thunar artemis/.config/
+/home/$USER/.config/transmission artemis/.config/
+/home/$USER/.config/yay artemis/.config/
+/home/$USER/.bash_profile artemis/
+/home/$USER/.i3/ artemis/
+/home/$USER/.xinitrc artemis/
+/home/$USER/.bashrc artemis/
+/home/$USER/.zshrc artemis/
