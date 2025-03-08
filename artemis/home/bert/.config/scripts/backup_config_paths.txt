@@ -22,3 +22,4 @@
 /home/$USER/.bashrc
 /home/$USER/.zshrc
 /etc/i3/config
+/home/bert/.screenlayout

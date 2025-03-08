@@ -10,10 +10,11 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 #alias
-alias vim=nvim
-alias rewire="vim ~/.i3/config"
-alias livealpha="source ~/Work/envs/py313_env_alpha/bin/activate"
-alias backup_configs="python ~/.config/scripts/backup_config_paths.py"
+source ~/.config/scripts/alias.sh
+
+#env vars
+source ~/.config/scripts/env_vars.sh
+source ~/.config/scripts/secret_env_vars.sh
 
 neofetch
-source ~/.config/env_vars.sh
+
