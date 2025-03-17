@@ -201,13 +201,13 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace  $ws9
-bindsym $mod+0 workspace  $ws10
-bindsym Mod1+1 workspace  $ws11
-bindsym Mod1+2 workspace  $ws12
-bindsym Mod1+3 workspace  $ws13
-bindsym Mod1+4 workspace  $ws14
-bindsym Mod1+5 workspace  $ws15
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym Mod1+1 workspace $ws11
+bindsym Mod1+2 workspace $ws12
+bindsym Mod1+3 workspace $ws13
+bindsym Mod1+4 workspace $ws14
+bindsym Mod1+5 workspace $ws15
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -247,7 +247,7 @@ bindsym Mod1+Shift+5 move container to workspace $ws15; workspace $ws15
 assign [class="Google-chrome"] $ws12
 assign [class="Thunar"] $ws3
 assign [class="Spotify"] $ws7
-assign [class="firefox"] $ws8
+assign [class="firefox"] $ws4
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -291,7 +291,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-#bindsym $mod+0 mode "$mode_system"
+bindsym Mod1+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -333,7 +333,7 @@ mode "resize" {
 
 # Lock screen
 bindsym Mod1+l exec --no-startup-id blurlock && xset dpms force off
-bindsym Mod1+k exec --no-startup-id i3lock && systemctl suspend   
+bindsym Mod1+k exec --no-startup-id blurlock && systemctl suspend   
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -347,8 +347,8 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-#exec --no-startup-id start_conky_green
+#exec --no-startup-id start_conky_maia
+exec --no-startup-id ~/.config/scripts/start_conky.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id sleep 2 && nitrogen --restore
@@ -484,10 +484,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# polybar
+
+#exec --no-startup-id ~/.config/polybar/launch.sh
 
 # monitor setup
 #exec --no-startup-id ~/.screenlayout/triple_monitor_setup_dp-1-0.1.sh
 exec autorandr --change
 exec --no-startup-id ~/.config/scripts/startup.sh
-
 
