@@ -23,3 +23,4 @@
 /home/$USER/.zshrc
 /etc/i3/config
 /home/bert/.screenlayout
+/home/bert/.config/polybar
